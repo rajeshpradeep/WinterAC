@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/common_padding"
+        android:text="Winter"
+        android:textColor="@color/text_title"
+        android:textSize="@dimen/medium_text1" />
+
+    <TextView
+        android:id="@+id/toolbar_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/common_margin"
+        android:text="Winter sub title"
+        android:textColor="@color/text_title"
+        android:textSize="@dimen/tiny_text1" />
+
+    <ImageButton
+        android:id="@+id/toolbar_globe_icon"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/common_margin1"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"/>
+
+</RelativeLayout>

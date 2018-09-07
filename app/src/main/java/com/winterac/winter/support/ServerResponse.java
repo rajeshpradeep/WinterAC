@@ -15,7 +15,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.winslider.interfaces.VolleyResponseListener;
+import com.winterac.winter.interfaces.VolleyMultiPartResponseListener;
+import com.winterac.winter.interfaces.VolleyResponseListener;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,7 +25,6 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.example.winslider.interfaces.VolleyMultiPartResponseListener;
 
 
 /**

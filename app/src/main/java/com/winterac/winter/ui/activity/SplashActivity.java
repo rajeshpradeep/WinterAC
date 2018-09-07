@@ -11,6 +11,7 @@ import android.view.WindowManager;
 import com.winterac.winter.R;
 
 
+
 public class SplashActivity extends AppCompatActivity {
 
     private String TAG = getClass().getSimpleName();
