@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/service_body"
         android:textSize="@dimen/tiny_text1"
+        android:text="This is actually not an Eclipse-specific issue; it's a general Java-on-Windows issue. It's because of how the JVM allocates memory on Windows; it insists on allocating a contiguous chunk of memory, which often Windows can't provide, even if there are enough separate chunks to satisfy the allocation request."
         android:textColor="@color/black"
         android:background="@color/white"
         android:padding="@dimen/common_padding2"/>

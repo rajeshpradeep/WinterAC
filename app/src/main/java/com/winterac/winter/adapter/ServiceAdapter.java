@@ -11,7 +11,6 @@ import android.widget.TextView;
 import com.winterac.winter.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by RajeshPradeep G on 06-Sep-18.
@@ -20,6 +19,12 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ServiceV
 
     private String TAG = getClass().getSimpleName();
     private Context context;
+    private ArrayList<String> serviceArrayList;
+
+    public ServiceAdapter(Context context, ArrayList<String> serviceArrayList) {
+        this.context = context;
+        this.serviceArrayList = serviceArrayList;
+    }
 
     @NonNull
     @Override

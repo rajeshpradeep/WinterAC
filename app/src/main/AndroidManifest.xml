@@ -20,7 +20,6 @@
         </activity>
         <activity
             android:name="com.winterac.winter.ui.activity.SplashActivity"
-            android:label="@string/title_activity_splash"
             android:resizeableActivity="false"
             android:screenOrientation="portrait"
             tools:targetApi="n">

@@ -251,8 +251,8 @@ public class ServerResponse {
                         }
                     }) {
                  @Override
-                 public Request.Priority getPriority() {
-                     return Request.Priority.IMMEDIATE;
+                 public Priority getPriority() {
+                     return Priority.IMMEDIATE;
                  }
                 /*
                 * If you want to add more parameters with the image

@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.winterac.winter.R;
+import com.winterac.winter.interfaces.INavigationListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,12 +23,16 @@ import java.util.List;
 public class SideMenuAdapter extends RecyclerView.Adapter<SideMenuAdapter.SidemenuViewHolder> {
 
     private String TAG = getClass().getSimpleName();
-    private List<String> menuItem = new ArrayList<>();
+    private List<String> menuItem;
+    ArrayList<Integer> iconArrayList;
     private Context context;
+    private INavigationListener iNavigationListener;
 
-    public SideMenuAdapter(Context context, List<String> menuItem) {
+    public SideMenuAdapter(Context context, List<String> menuItem, ArrayList<Integer> iconArrayList, INavigationListener iNavigationListener) {
         this.menuItem = menuItem;
         this.context = context;
+        this.iconArrayList = iconArrayList;
+        this.iNavigationListener = iNavigationListener;
     }
 
     @NonNull
@@ -38,9 +43,16 @@ public class SideMenuAdapter extends RecyclerView.Adapter<SideMenuAdapter.Sideme
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SidemenuViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SidemenuViewHolder holder, final int position) {
         holder.sideMenuTitle.setText(menuItem.get(position));
+        holder.sideMenuIcon.setImageResource(iconArrayList.get(position));
         Log.i(TAG, "onBindViewHolder:menuItem "+menuItem.get(position));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                iNavigationListener.menuSelected(position, menuItem.get(position));
+            }
+        });
         holder.itemView.setTag(position);
     }
 

@@ -17,4 +17,7 @@
         <item>@string/settings</item>
         <item>@string/contact_us</item>
     </string-array>
+
+    <string name="empty_value"></string>
+    <string name="message">Loading...</string>
 </resources>
